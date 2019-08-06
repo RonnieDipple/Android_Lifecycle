@@ -150,21 +150,26 @@ class FullscreenActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.i("${javaClass.simpleName}", "onStart()")
+        Log.i("${javaClass.simpleName} ron", "onStart()")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.i("${javaClass.simpleName}", "onResume()")
+        Log.i("${javaClass.simpleName} ron", "onResume()")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.i("${javaClass.simpleName}", "onPause()")
+        Log.i("${javaClass.simpleName} ron", "onPause()")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.i("${javaClass.simpleName}", "onStop()")
+        Log.i("${javaClass.simpleName} ron", "onStop()")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("${javaClass.simpleName} ron", "onDestroy()")
     }
 }

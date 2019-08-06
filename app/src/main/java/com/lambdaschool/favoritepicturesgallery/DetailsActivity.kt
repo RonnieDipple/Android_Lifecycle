@@ -65,16 +65,21 @@ class DetailsActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        Log.i("${javaClass.simpleName}", "onResume()")
+        Log.i("${javaClass.simpleName} ron", "onResume()")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.i("${javaClass.simpleName}", "onPause()")
+        Log.i("${javaClass.simpleName} ron", "onPause()")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.i("${javaClass.simpleName}", "onStop()")
+        Log.i("${javaClass.simpleName} ron", "onStop()")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("${javaClass.simpleName} ron", "onDestroy()")
     }
 }
