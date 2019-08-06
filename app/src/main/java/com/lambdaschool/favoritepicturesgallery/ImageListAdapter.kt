@@ -68,4 +68,7 @@ class ImageListAdapter// Provide a suitable constructor (depends on the kind of 
 
         internal val EDIT_IMAGE_REQUEST = 2
     }
+
+
+
 }

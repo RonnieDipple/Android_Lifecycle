@@ -8,6 +8,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.ImageView
@@ -144,5 +145,26 @@ class FullscreenActivity : AppCompatActivity() {
          * and a change of the status and navigation bar.
          */
         private val UI_ANIMATION_DELAY = 300
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("${javaClass.simpleName}", "onStart()")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("${javaClass.simpleName}", "onResume()")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("${javaClass.simpleName}", "onPause()")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("${javaClass.simpleName}", "onStop()")
     }
 }

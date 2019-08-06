@@ -24,12 +24,19 @@ class MainActivity : AppCompatActivity() {
     private var layoutManager: LinearLayoutManager? = null
     private var listAdapter: ImageListAdapter? = null
 
+
+    // RD: onCreate does things like launching activity_main
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.i("MainActivity", "onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val context = this
 
+
+        //RD: Initializes imageList to an ArrayList
         imageList = ArrayList()
+
+        //RD: setOnClickListener causes an action to be undertaken when the button is clicked
 
         button_add.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
@@ -85,5 +92,26 @@ class MainActivity : AppCompatActivity() {
 
         internal const val REQUEST_IMAGE_GET = 1
         internal const val EDIT_IMAGE_REQUEST = 2
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("${javaClass.simpleName}", "onStart()")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("${javaClass.simpleName}", "onResume()")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("${javaClass.simpleName}", "onPause()")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("${javaClass.simpleName}", "onStop()")
     }
 }

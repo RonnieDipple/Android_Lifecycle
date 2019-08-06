@@ -9,6 +9,7 @@ class ImageData(fullPhotoUri: Uri) : Serializable {
     var description: String? = null
     val fileUriString: String
 
+    //RD: finds file path
     val fileUri: Uri
         get() = Uri.parse(fileUriString)
 
